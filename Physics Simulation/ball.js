@@ -20,6 +20,14 @@ function Ball(a,b)  {
     this.acc.mult(0);
     this.vel.mult(0.99)
   }
+  this.edges = function(){
+    if (this.pos.x > width || this.pos.x < 0){
+      this.vel.x = - this.vel.x;
+    }
+    if (this.pos.y > width || this.pos.y < 0){
+      this.vel.y = - this.vel.y;
+    }
+  }
   this.applyForce = function(a){
     this.acc.add(a);
   }

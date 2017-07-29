@@ -12,6 +12,7 @@ function draw() {
   for(var i = 0; i < balls.length; i++){
     balls[i].show();
     balls[i].update();
+    balls[i].edges();
     if(mouseIsPressed){
       var mouse = createVector(mouseX,mouseY);
       balls[i].applyForce(mouse.sub(balls[i].pos));
