@@ -2,7 +2,7 @@ var balls = [];
 var loc = new p5.Vector(0,0);
 function setup() {
 
-  createCanvas(400,600);
+  createCanvas(600,600);
   //ball = new Ball(width/2,height/2);
 }
 
