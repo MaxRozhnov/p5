@@ -28,10 +28,6 @@ function draw() {
     var g2 = prev.pixels[index+1];
     var b2 = prev.pixels[index+2];
 
-    pixels[index+0] = r2;
-    pixels[index+1] = g2;
-    pixels[index+2] = b2;
-    pixels[index+3] = 0;
     // console.log(r1);
     // console.log(r2);
 
@@ -39,12 +35,12 @@ function draw() {
        pixels[index+0] = 0;
        pixels[index+1] = 0;
        pixels[index+2] = 0;
-       pixels[index+3] = 255;
+       //pixels[index+3] = 255;
     }else{
          pixels[index+0] = 255;
          pixels[index+1] = 255;
          pixels[index+2] = 255;
-         pixels[index+3] = 255;
+        // pixels[index+3] = 255;
     }
       //
       // }else{
