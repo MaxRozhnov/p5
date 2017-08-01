@@ -1,8 +1,7 @@
 var video;
 var prev;
 function setup() {
-  //cameras = Capture.list();
-  //console.log(cameras);
+
 
   video = createCapture(VIDEO);
   video.hide();
@@ -11,13 +10,14 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(255);
   video.loadPixels();
   prev.loadPixels()
   loadPixels();
   for (var y = 0; y < video.height; y++) {
     for (var x = 0; x < video.width; x++) {
       var index = (video.width - x + 1 + (y * video.width))*4;
+
       var r1 = video.pixels[index+0];
       var g1 = video.pixels[index+1];
       var b1 = video.pixels[index+2];
@@ -26,7 +26,13 @@ function draw() {
       var g2 = prev.pixels[index+1];
       var b2 = prev.pixels[index+2];
 
-      console.log(distSq(r1,g1,b1,r2,g2,b2));  
+      if (distSq(r1,g1,b1,r2,g2,b2) > 3000){
+        pixels[index+0] = 0;
+        pixels[index+1] = 0;
+        pixels[index+2] = 0;
+        pixels[index+3] = 255;
+
+      }
 
       prev.pixels[index+0] = r1;
       prev.pixels[index+1] = g1;
