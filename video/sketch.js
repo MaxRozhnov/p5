@@ -5,7 +5,7 @@ function setup() {
   //pixelDensity(1);
   video = createCapture(VIDEO);
   video.hide();
-  prev = createImage(video.width,video.height);
+  prev = createImage(640,480);
   createCanvas(320,240);
   frameRate(30);
 }
