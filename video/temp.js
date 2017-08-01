@@ -1,6 +1,6 @@
 var video;
 var prev;
-var vScale = 1;
+var vScale = 16;
 function setup() {
   createCanvas(320,240);
   pixelDensity(1);
@@ -29,9 +29,11 @@ function draw() {
         if (distSq(col[0],col[1],col[2],pcol[0],pcol[1],pcol[2]) > 1000) {
           fill(0);
           noStroke();
-          pixels[index+0] = 0;
-          pixels[index+1] = 0;
-          pixels[index+2] = 0;
+          // pixels[index+0] = 0;
+          // pixels[index+1] = 0;
+          // pixels[index+2] = 0;
+
+          rect(x*vScale,y*vScale,vScle,vScale);
         }else{
 
         }
