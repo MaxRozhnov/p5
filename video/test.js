@@ -10,11 +10,11 @@ function setup() {
   prev = createImage(video.width,video.height);
   createCanvas(320,240);
   frameRate(25);
+  backgoround(100,0,200);
 }
 
 function draw() {
-  console.log(pixels[1]);
-  background(255);
+  //background(255);
   video.loadPixels();
   prev.loadPixels();
   loadPixels();
@@ -41,9 +41,9 @@ function draw() {
       point(x,y);
        //pixels[index+3] = 255;
     }else{
-         pixels[index+0] = 255;
-         pixels[index+1] = 255;
-         pixels[index+2] = 255;
+        //  pixels[index+0] = 255;
+        //  pixels[index+1] = 255;
+        //  pixels[index+2] = 255;
         // pixels[index+3] = 255;
     }
     prev.pixels[index+0] = r1;
