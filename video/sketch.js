@@ -2,8 +2,8 @@ var video
 function setup() {
   //cameras = Capture.list();
   //console.log(cameras);
-  var video = createCapture(VIDEO);
-  video.hide();
+  video = createCapture(VIDEO);
+  //video.hide();
   createCanvas(320,240);
 }
 
@@ -20,7 +20,7 @@ function draw() {
       pixels[index+1] = g;
       pixels[index+2] = b;
       pixels[index+3] = 255;
+    }
   }
-}
 
 }
