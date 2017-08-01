@@ -15,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-  background(100,0,200);
+  background(255);
   video.loadPixels();
   loadPixels();
   console.log(prev.pixels[1]);
