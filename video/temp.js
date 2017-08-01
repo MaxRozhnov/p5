@@ -15,7 +15,7 @@ function draw() {
   background(255);
   //loadPixels();
   video.loadPixels();
-  //prev.loadPixels();
+  prev.loadPixels();
   for (var y = 0; y < video.height; y++){
     for (var x = 0; x < video.width; x++){
         var index = y * video.width + x;
