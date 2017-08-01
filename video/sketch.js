@@ -55,7 +55,7 @@ function draw() {
       prev.pixels[index+3] = 255;
     }
   }
-  updatePixels();
+  //updatePixels();
   prev.updatePixels();
 
 }
