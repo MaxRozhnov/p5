@@ -17,7 +17,7 @@ function draw() {
   video.loadPixels();
   prev.loadPixels();
   loadPixels();
-  for (var index = 0; index < video.pixels.length; index++) {
+  for (var index = 0; index < video.pixels.length/4; index++) {
     //pixels[index] = video.pixels[index];
 
 
@@ -33,6 +33,7 @@ function draw() {
       pixels[index+0] = 0;
       pixels[index+1] = 0;
       pixels[index+2] = 0;
+      pixels[index+3] = 255;
     }
       //
       // }else{
@@ -46,7 +47,6 @@ function draw() {
     prev.pixels[index+0] = r1;
     prev.pixels[index+1] = g1;
     prev.pixels[index+2] = b1;
-    prev.pixels[index+3] = 255;
     //}
   }
   updatePixels();
