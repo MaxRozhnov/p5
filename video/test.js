@@ -17,6 +17,7 @@ function setup() {
 }
 
 function draw() {
+  threshold = slider.value();
   background(255);
   video.loadPixels();
   loadPixels();
