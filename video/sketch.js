@@ -7,7 +7,7 @@ function setup() {
   video = createCapture(VIDEO);
   video.size(320,240);
   video.hide();
-  prev = createImage(video.width,video.height*8);
+  prev = createImage(video.width,video.height);
   createCanvas(320,240);
   frameRate(30);
 }
@@ -20,7 +20,7 @@ function draw() {
   for (var y = 0; y < video.height; y++) {
     for (var x = 0; x < video.width; x++) {
       //var index = (video.width - x + 1 + (y * video.width))*4;
-      var index =(y * video.width + x) * 4; 
+      var index =(y * video.width + x) * 4;
 
       var r1 = video.pixels[index+0];
       var g1 = video.pixels[index+1];
