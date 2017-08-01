@@ -14,7 +14,7 @@ function setup() {
 
 function draw() {
   background(255);
-  video.loadPixels();
+
   for (var y = 0; y < video.height; y++){
     for (var x = 0; x < video.width; x++){
         var index = y * video.width + x;
@@ -33,7 +33,10 @@ function draw() {
     }
 
   }
-  prev = video;
+  video.loadPixels();
+  prev.loadPixels();
+  prev.pixels = video.pixels;
+  prev.updatePixels();
 }
 
 function distSq(a,b,c,x,y,z){
