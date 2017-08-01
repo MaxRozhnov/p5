@@ -13,11 +13,14 @@ function setup() {
 
 function draw() {
   background(255);
-  loadPixels();
+  //loadPixels();
+  video.loadPixels();
+  prev.loadPixels();
   for (var y = 0; y < video.height; y++){
     for (var x = 0; x < video.width; x++){
-        col = video.get(x,y);
-        pcol = prev.get(x,y);
+        var index = y * video.width + x;
+        var col = video.get(x,y);
+        var pcol = prev.get(x,y);
         if (distSq(col[0],col[1],col[2],pcol[0],pcol[1],pcol[2]) > 1000) {
           fill(0);
           noStroke();
@@ -25,10 +28,12 @@ function draw() {
         }else{
 
         }
-        console.log(col);
+        prev.pixels[index] = video.pixels[index];
 
     }
+
   }
+  prev.updatePixels();
 //  video.loadPixels();
 //  prev.loadPixels();
   // loadPixels();
