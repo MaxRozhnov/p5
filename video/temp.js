@@ -7,16 +7,15 @@ function setup() {
   video = createCapture(VIDEO);
   video.size(width/vScale,height/vScale);
   video.hide();
-  prev = createImage(video.width,video.height);
+  prev = createImage(width/vScale,height/vScale);
   prev = copy(video,0,0,video.width,video.height,video.width,video.heigth);
   frameRate(30);
 }
 
 function draw() {
   background(255);
-  //loadPixels();
+
   video.loadPixels();
-  prev.loadPixels();
   for (var y = 0; y < video.height; y++){
     for (var x = 0; x < video.width; x++){
         var index = y * video.width + x;
