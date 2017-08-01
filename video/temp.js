@@ -14,8 +14,8 @@ function setup() {
 
 function draw() {
   background(255);
-  console.log(video.get(0,0));
-  console.log(prev.get(0,0));
+  // console.log(video.get(0,0));
+  // console.log(prev.get(0,0));
 
   for (var y = 0; y < video.height; y++){
     for (var x = 0; x < video.width; x++){
@@ -28,7 +28,7 @@ function draw() {
           fill(0);
           noStroke();
           point(x,y);
-          //console.log(distSq(col[0],col[1],col[2],pcol[0],pcol[1],pcol[2]));
+          console.log(distSq(col[0],col[1],col[2],pcol[0],pcol[1],pcol[2]));
         }else{
 
         }
@@ -42,7 +42,7 @@ function draw() {
       prev.pixels[i] = video.pixels[i];
   }
   prev.updatePixels();
-  
+
 }
 
 function distSq(a,b,c,x,y,z){
