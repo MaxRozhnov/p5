@@ -14,9 +14,10 @@ function setup() {
 
 function draw() {
   background(255);
+  fill(0);
+  rect(0,0,100,100);
   // console.log(video.get(0,0));
   // console.log(prev.get(0,0));
-
   for (var y = 0; y < video.height; y++){
     for (var x = 0; x < video.width; x++){
         var index = y * video.width + x;
@@ -27,7 +28,6 @@ function draw() {
         if (distSq(col[0],col[1],col[2],pcol[0],pcol[1],pcol[2]) > 1000) {
           fill(0);
           noStroke();
-          point(x,y);
           console.log(distSq(col[0],col[1],col[2],pcol[0],pcol[1],pcol[2]));
         }else{
 
