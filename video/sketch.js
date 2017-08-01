@@ -16,6 +16,10 @@ function draw() {
       var r = video.pixels[index+0];
       var g = video.pixels[index+1];
       var b = video.pixels[index+2];
+      pixels[index+0] = r;
+      pixels[index+1] = g;
+      pixels[index+2] = b;
+      pixels[index+3] = 255;
   }
 }
 
