@@ -1,29 +1,43 @@
-var video
+var video;
+var prev;
 function setup() {
   //cameras = Capture.list();
   //console.log(cameras);
 
   video = createCapture(VIDEO);
   video.hide();
+  prev = createImage(320,240);
   createCanvas(320,240);
 }
 
 function draw() {
   background(0);
   video.loadPixels();
+  prev.loadPixels()
   loadPixels();
   for (var y = 0; y < video.height; y++) {
     for (var x = 0; x < video.width; x++) {
       var index = (video.width - x + 1 + (y * video.width))*4;
-      var r = video.pixels[index+0];
-      var g = video.pixels[index+1];
-      var b = video.pixels[index+2];
-      pixels[index+0] = r;
-      pixels[index+1] = g;
-      pixels[index+2] = b;
-      pixels[index+3] = 255;
+      var r1 = video.pixels[index+0];
+      var g1 = video.pixels[index+1];
+      var b1 = video.pixels[index+2];
+
+      var r2 = prev.pixels[index+0];
+      var g2 = prev.pixels[index+1];
+      var b2 = prev.pixels[index+2];
+
+      console.log(distSq(r1,g1,b1,r2,g2,b2));  
+
+      prev.pixels[index+0] = r1;
+      prev.pixels[index+1] = g1;
+      prev.pixels[index+2] = b1;
+      prev.pixels[index+3] = 255;
     }
   }
   updatePixels();
 
+}
+
+function distSq(a,b,c,x,y,z){
+  return ((a-x)*(a-x) + (b-y)*(b-y) + (c-z)*(c-z));
 }
