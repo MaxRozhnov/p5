@@ -18,8 +18,8 @@ function draw() {
   video.loadPixels();
   prev.loadPixels();
   loadPixels();
-  for (var index = 0; index < video.pixels.length; index++) {
-
+  for (var i = 0; i < video.pixels.length/4; i++) {
+    var index = i*4;
     var r1 = video.pixels[index+0];
     var g1 = video.pixels[index+1];
     var b1 = video.pixels[index+2];
@@ -28,8 +28,7 @@ function draw() {
     var g2 = prev.pixels[index+1];
     var b2 = prev.pixels[index+2];
 
-    // console.log(r1);
-    // console.log(r2);
+
 
     if (distSq(r1,g1,b1,r2,g2,b2) > threshold){
       var x = index % width;
