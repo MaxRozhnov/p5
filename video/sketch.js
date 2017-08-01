@@ -1,5 +1,6 @@
 var video;
 var prev;
+var threshold = 3000;
 function setup() {
 
   //pixelDensity(1);
@@ -27,7 +28,7 @@ function draw() {
       var g2 = prev.pixels[index+1];
       var b2 = prev.pixels[index+2];
 
-      if (distSq(r1,g1,b1,r2,g2,b2) > 2000){
+      if (distSq(r1,g1,b1,r2,g2,b2) > threshold){
         pixels[index+0] = 0;
         pixels[index+1] = 0;
         pixels[index+2] = 0;
