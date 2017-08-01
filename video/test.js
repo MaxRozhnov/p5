@@ -16,13 +16,14 @@ function setup() {
 function draw() {
   background(255);
   video.loadPixels();
-  prev.loadPixels();
+
   loadPixels();
   for (var i = 0; i < video.pixels.length/4; i++) {
     var index = i*4;
     var r1 = video.pixels[index+0];
     var g1 = video.pixels[index+1];
     var b1 = video.pixels[index+2];
+    prev.loadPixels();
 
     var r2 = prev.pixels[index+0];
     var g2 = prev.pixels[index+1];
