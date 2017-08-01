@@ -8,6 +8,7 @@ function setup() {
 }
 
 function draw() {
+  background(0);
   video.loadPixels();
   loadPixels();
   for (var y = 0; y < video.height; y++) {
