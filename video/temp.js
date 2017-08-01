@@ -33,7 +33,7 @@ function draw() {
     }
 
   }
-  prev = copy(video,0,0,video.width,video.height,video.width,video.heigth);
+  prev = copy(video,0,0,video.width,video.height,video.width,video.height);
 }
 
 function distSq(a,b,c,x,y,z){
