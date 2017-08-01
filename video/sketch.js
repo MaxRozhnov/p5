@@ -7,6 +7,7 @@ function setup() {
   video.hide();
   prev = createImage(320,240);
   createCanvas(320,240);
+  frameRate(30);
 }
 
 function draw() {
@@ -14,7 +15,7 @@ function draw() {
   video.loadPixels();
   prev.loadPixels()
   loadPixels();
-  for (var y = 0; y < video.height/2; y++) {
+  for (var y = 0; y < video.height; y++) {
     for (var x = 0; x < video.width; x++) {
       var index = (video.width - x + 1 + (y * video.width))*4;
 
