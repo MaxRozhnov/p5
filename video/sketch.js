@@ -34,10 +34,10 @@ function draw() {
         //pixels[index+3] = 255;
 
       }else{
-        pixels[index+0] = 255;
-        pixels[index+1] = 255;
-        pixels[index+2] = 255;
-        pixels[index+3] = 255;
+        // pixels[index+0] = 255;
+        // pixels[index+1] = 255;
+        // pixels[index+2] = 255;
+        // pixels[index+3] = 255;
 
       }
 
