@@ -31,7 +31,7 @@ function draw() {
     pixels[index+0] = r2;
     pixels[index+1] = g2;
     pixels[index+2] = b2;
-    pixels[index+3] = 255;
+    pixels[index+3] = 0;
     // console.log(r1);
     // console.log(r2);
 
