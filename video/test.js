@@ -11,6 +11,7 @@ function setup() {
   createCanvas(320,240);
   frameRate(20);
   background(100,0,200);
+  prev.loadPixels();
 }
 
 function draw() {
@@ -18,7 +19,7 @@ function draw() {
   video.loadPixels();
 
   loadPixels();
-  prev.loadPixels();
+
   console.log(prev.pixels[1]);
   for (var i = 0; i < video.pixels.length/4; i++) {
 
