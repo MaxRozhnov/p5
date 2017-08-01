@@ -4,7 +4,7 @@ function setup() {
   //console.log(cameras);
 
   video = createCapture(VIDEO);
-  //video.hide();
+  video.hide();
   createCanvas(320,240);
 }
 
