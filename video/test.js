@@ -14,7 +14,7 @@ function setup() {
 }
 
 function draw() {
-  //background(255);
+  background(255);
   video.loadPixels();
   prev.loadPixels();
   loadPixels();
@@ -28,9 +28,7 @@ function draw() {
     var g2 = prev.pixels[index+1];
     var b2 = prev.pixels[index+2];
 
-    pixels[index+0] = r1;
-    pixels[index+1] = g1;
-    pixels[index+2] = b1;
+
 
 
 
