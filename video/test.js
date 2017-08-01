@@ -14,7 +14,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(100,0,200);
   video.loadPixels();
 
   loadPixels();
@@ -57,11 +57,7 @@ function draw() {
 
   updatePixels();
   console.log(prev.pixels[1]);
-  prev.updatePixels();
-
-  image(prev,0,0);
-
-
+  //prev.updatePixels();
 }
 
 function distSq(a,b,c,x,y,z){
