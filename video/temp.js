@@ -1,6 +1,6 @@
 var video;
 var prev;
-var vScale = 4;
+var vScale = 1;
 function setup() {
   createCanvas(320,240);
   pixelDensity(1);
@@ -18,6 +18,7 @@ function draw() {
   //rect(0,0,100,100);
   // console.log(video.get(0,0));
   // console.log(prev.get(0,0));
+  loadPixels();
   for (var y = 0; y < video.height; y++){
     for (var x = 0; x < video.width; x++){
         var index = y * video.width + x;
@@ -28,8 +29,9 @@ function draw() {
         if (distSq(col[0],col[1],col[2],pcol[0],pcol[1],pcol[2]) > 1000) {
           fill(0);
           noStroke();
-          rect(x*vScale,y*vScale,vScale,vScale);
-          console.log(distSq(col[0],col[1],col[2],pcol[0],pcol[1],pcol[2]));
+          pixels[index+0] = 0;
+          pixels[index+1] = 0;
+          pixels[index+2] = 0;
         }else{
 
         }
@@ -37,6 +39,7 @@ function draw() {
     }
 
   }
+  updatePixels();
   video.loadPixels();
   prev.loadPixels();
   for (var i = 0; i < video.pixels.length; i++){
