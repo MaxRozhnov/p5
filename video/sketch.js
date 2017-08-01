@@ -5,7 +5,7 @@ function setup() {
   //pixelDensity(1);
   video = createCapture(VIDEO);
   video.hide();
-  prev = createImage(320,240);
+  prev = createImage(video.width,wideo.height);
   createCanvas(320,240);
   frameRate(30);
 }
@@ -41,9 +41,9 @@ function draw() {
 
       }
 
-      prev.pixels[index+0] = r1;
-      prev.pixels[index+1] = g1;
-      prev.pixels[index+2] = b1;
+      prev.pixels[index+0] = 255;
+      prev.pixels[index+1] = 255;
+      prev.pixels[index+2] = 255;
       prev.pixels[index+3] = 255;
     }
   }
