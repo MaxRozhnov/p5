@@ -17,9 +17,7 @@ function setup() {
 function draw() {
   background(100,0,200);
   video.loadPixels();
-
   loadPixels();
-
   console.log(prev.pixels[1]);
   for (var i = 0; i < video.pixels.length/4; i++) {
 
@@ -38,9 +36,9 @@ function draw() {
     prev.pixels[index+1] = g1;
     prev.pixels[index+2] = b1;
 
-    // pixels[index+0] = r2;
-    // pixels[index+1] = g2;
-    // pixels[index+2] = b2;
+    pixels[index+0] = r2;
+    pixels[index+1] = g2;
+    pixels[index+2] = b2;
 
     //
     // if (distSq(r1,g1,b1,r2,g2,b2) > threshold){
