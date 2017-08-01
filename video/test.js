@@ -9,7 +9,7 @@ function setup() {
   //video.hide();
   prev = createImage(video.width,video.height);
   createCanvas(320,240);
-  frameRate(30);
+  frameRate(25);
 }
 
 function draw() {
