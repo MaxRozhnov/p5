@@ -6,10 +6,9 @@ function setup() {
   pixelDensity(1);
   video = createCapture(VIDEO);
   video.size(width/vScale,height/vScale);
-  //video.hide();
+  video.hide();
   prev = createImage(video.width,video.height);
   prev = copy(video,0,0,video.width,video.height,video.width,video.heigth);
-
   frameRate(30);
 }
 
