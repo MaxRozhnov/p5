@@ -21,6 +21,7 @@ function draw() {
   prev.loadPixels();
   console.log(prev.pixels[1]);
   for (var i = 0; i < video.pixels.length/4; i++) {
+    console.log(prev.pixels[1]);
     var index = i*4;
     var r1 = video.pixels[index+0];
     var g1 = video.pixels[index+1];
