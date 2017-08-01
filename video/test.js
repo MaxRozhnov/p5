@@ -13,13 +13,12 @@ function setup() {
 }
 
 function draw() {
+  console.log(pixels[1]);
   background(255);
   video.loadPixels();
   prev.loadPixels();
   loadPixels();
   for (var index = 0; index < video.pixels.length; index++) {
-    //pixels[index] = video.pixels[index];
-
 
     var r1 = video.pixels[index+0];
     var g1 = video.pixels[index+1];
@@ -37,10 +36,10 @@ function draw() {
     // console.log(r2);
 
     if (distSq(r1,g1,b1,r2,g2,b2) > threshold){
-      // pixels[index+0] = 0;
-      // pixels[index+1] = 0;
-      // pixels[index+2] = 0;
-      // pixels[index+3] = 255;
+       pixels[index+0] = 0;
+       pixels[index+1] = 0;
+       pixels[index+2] = 0;
+       pixels[index+3] = 255;
     }
       //
       // }else{
