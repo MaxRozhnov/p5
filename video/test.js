@@ -32,9 +32,9 @@ function draw() {
     prev.pixels[index+1] = g1;
     prev.pixels[index+2] = b1;
 
-    pixels[index+0] = prev.pixels[index+0];
-    pixels[index+1] = prev.pixels[index+1];
-    pixels[index+2] = prev.pixels[index+2];
+    pixels[index+0] = r2;
+    pixels[index+1] = g2;
+    pixels[index+2] = b2;
 
     //
     // if (distSq(r1,g1,b1,r2,g2,b2) > threshold){
