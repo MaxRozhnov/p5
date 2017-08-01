@@ -3,7 +3,7 @@ var prev;
 var threshold = 3500;
 function setup() {
 
-  //pixelDensity(1);
+  pixelDensity(1);
   video = createCapture(VIDEO);
   video.hide();
   prev = createImage(video.width,video.height);
