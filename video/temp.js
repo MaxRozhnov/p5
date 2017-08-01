@@ -13,8 +13,13 @@ function setup() {
 
 function draw() {
   background(0);
-  video.loadPixels();
-  prev.loadPixels()
+  for (var y = 0; y < video.height; y++){
+    for (var x = 0; x < video.width; x++){
+
+    }
+  }
+//  video.loadPixels();
+//  prev.loadPixels();
   // loadPixels();
   // for (var y = 0; y < video.height; y++) {
   //   for (var x = 0; x < video.width; x++) {
