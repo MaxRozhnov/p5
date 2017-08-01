@@ -28,8 +28,8 @@ function draw() {
     var r2 = prev.pixels[index+0];
     var g2 = prev.pixels[index+1];
     var b2 = prev.pixels[index+2];
-    console.log(r1);
-    console.log(r2);
+    // console.log(r1);
+    // console.log(r2);
 
     if (distSq(r1,g1,b1,r2,g2,b2) > threshold){
       pixels[index+0] = 0;
