@@ -37,7 +37,8 @@ function draw() {
       //  pixels[index+0] = 0;
       //  pixels[index+1] = 0;
       //  pixels[index+2] = 0;
-      set(x,y,0,0,0);
+      black = color(0,0,0,255);
+      set(x,y,black);
        //pixels[index+3] = 255;
     }else{
          pixels[index+0] = 255;
