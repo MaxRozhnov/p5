@@ -6,7 +6,7 @@ function setup() {
   pixelDensity(1);
   video = createCapture(VIDEO);
   video.size(width/vScale,height/vScale);
-  video.hide();
+  //video.hide();
   prev = createImage(width/vScale,height/vScale);
   //prev = copy(video,0,0,video.width,video.height,video.width,video.height);
   frameRate(30);
@@ -34,6 +34,7 @@ function draw() {
 
   }
   //prev = copy(video,0,0,video.width,video.height,video.width,video.height);
+  prev = video;
 }
 
 function distSq(a,b,c,x,y,z){
