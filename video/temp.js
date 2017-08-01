@@ -28,7 +28,7 @@ function draw() {
           fill(0);
           noStroke();
           point(x,y);
-          console.log(distSq(col[0],col[1],col[2],pcol[0],pcol[1],pcol[2]));
+          //console.log(distSq(col[0],col[1],col[2],pcol[0],pcol[1],pcol[2]));
         }else{
 
         }
