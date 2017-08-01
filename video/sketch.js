@@ -26,7 +26,7 @@ function draw() {
       var g2 = prev.pixels[index+1];
       var b2 = prev.pixels[index+2];
 
-      if (distSq(r1,g1,b1,r2,g2,b2) > 30000){
+      if (distSq(r1,g1,b1,r2,g2,b2) > 300000){
         pixels[index+0] = 0;
         pixels[index+1] = 0;
         pixels[index+2] = 0;
