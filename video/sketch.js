@@ -24,5 +24,6 @@ function draw() {
       pixels[index+3] = 255;
     }
   }
+  updatePixels();
 
 }
