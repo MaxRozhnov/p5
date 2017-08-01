@@ -27,6 +27,11 @@ function draw() {
     var r2 = prev.pixels[index+0];
     var g2 = prev.pixels[index+1];
     var b2 = prev.pixels[index+2];
+
+    prev.pixels[index+0] = r1;
+    prev.pixels[index+1] = g1;
+    prev.pixels[index+2] = b1;
+
     pixels[index+0] = prev.pixels[index+0];
     pixels[index+1] = prev.pixels[index+1];
     pixels[index+2] = prev.pixels[index+2];
@@ -43,11 +48,7 @@ function draw() {
     //       pixels[index+2] = 255;
     //       pixels[index+3] = 255;
     // }
-    prev.pixels[index+0] = r1;
-    prev.pixels[index+1] = g1;
-    prev.pixels[index+2] = b1;
 
-    //
   }
   prev.updatePixels();
   updatePixels();
