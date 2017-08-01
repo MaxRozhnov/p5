@@ -2,7 +2,7 @@ var video;
 var prev;
 function setup() {
 
-  pixelDensity(1);
+  //pixelDensity(1);
   video = createCapture(VIDEO);
   video.hide();
   prev = createImage(320,240);
