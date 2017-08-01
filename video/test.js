@@ -43,7 +43,8 @@ function draw() {
         // pixels[index+3] = 255;
     }
 
-    prev = video.get();  
+    prev = video.get();
+    image(prev,0,0);
     // prev.pixels[index+0] = r1;
     // prev.pixels[index+1] = g1;
     // prev.pixels[index+2] = b1;
