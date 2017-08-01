@@ -15,6 +15,9 @@ function draw() {
   background(0);
   for (var y = 0; y < video.height; y++){
     for (var x = 0; x < video.width; x++){
+        col = video.get(x,y);
+        pcol = prev.get(x,y);
+        console.log(col);
 
     }
   }
