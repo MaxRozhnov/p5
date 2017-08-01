@@ -23,6 +23,7 @@ function draw() {
     var r1 = video.pixels[index+0];
     var g1 = video.pixels[index+1];
     var b1 = video.pixels[index+2];
+    
     prev.loadPixels();
 
     var r2 = prev.pixels[index+0];
@@ -32,6 +33,10 @@ function draw() {
     prev.pixels[index+0] = r1;
     prev.pixels[index+1] = g1;
     prev.pixels[index+2] = b1;
+
+    prev.updatePixels();
+
+
 
     pixels[index+0] = r2;
     pixels[index+1] = g2;
@@ -51,7 +56,7 @@ function draw() {
     // }
 
   }
-  prev.updatePixels();
+
   updatePixels();
 
 
