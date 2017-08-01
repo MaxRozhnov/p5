@@ -6,7 +6,8 @@ function setup() {
   //pixelDensity(1);
   video = createCapture(VIDEO);
   video.hide();
-  prev = createImage(video.width,video.height*4);
+  //prev = createImage(video.width,video.height*4);
+  prev = [];
   createCanvas(320,240);
   frameRate(30);
 }
@@ -14,7 +15,7 @@ function setup() {
 function draw() {
   background(0);
   video.loadPixels();
-  prev.loadPixels()
+  //prev.loadPixels()
   loadPixels();
   for (var y = 0; y < video.height; y++) {
     for (var x = 0; x < video.width; x++) {
@@ -42,14 +43,24 @@ function draw() {
 
       }
 
-      prev.pixels[index+0] = r1;
-      prev.pixels[index+1] = g1;
-      prev.pixels[index+2] = b1;
-      prev.pixels[index+3] = 255;
+      // prev.pixels[index+0] = r1;
+      // prev.pixels[index+1] = g1;
+      // prev.pixels[index+2] = b1;
+      // prev.pixels[index+3] = 255;
+
+    }
+  }
+  prev.splice(0,prev.length);
+  for (var y = 0; y < video.height; y++) {
+    for (var x = 0; x < video.width; x++) {
+      prev.push(r1);
+      prev.push(g1);
+      prev.push(b1);
+      prev.push(255);
     }
   }
   updatePixels();
-  prev.updatePixels();
+  //prev.updatePixels();
 
 }
 
