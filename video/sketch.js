@@ -1,6 +1,6 @@
 var video;
 var prev;
-var threshold = 3000;
+var threshold = 5000;
 function setup() {
 
   //pixelDensity(1);
