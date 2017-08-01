@@ -2,12 +2,12 @@ var video;
 var prev;
 function setup() {
 
-
+  pixelDensity(1);
   video = createCapture(VIDEO);
   video.hide();
   prev = createImage(320,240);
   createCanvas(320,240);
-  frameRate(2);
+  frameRate(30);
 }
 
 function draw() {
