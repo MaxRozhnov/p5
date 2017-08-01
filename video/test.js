@@ -10,7 +10,7 @@ function setup() {
   prev = createImage(video.width,video.height);
   createCanvas(320,240);
   frameRate(25);
-  backgoround(100,0,200);
+  background(100,0,200);
 }
 
 function draw() {
