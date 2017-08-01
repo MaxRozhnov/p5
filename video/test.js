@@ -1,3 +1,4 @@
+var slider;
 var video;
 var prev;
 var threshold = 3000;
@@ -9,6 +10,7 @@ function setup() {
   //video.hide();
   prev = createImage(video.width,video.height);
   createCanvas(320,240);
+  slider = createSlider(100,6000,3000);
   frameRate(20);
   background(100,0,200);
   prev.loadPixels();
