@@ -32,14 +32,17 @@ function draw() {
     // console.log(r2);
 
     if (distSq(r1,g1,b1,r2,g2,b2) > threshold){
-       pixels[index/4+0] = 0;
-       pixels[index/4+1] = 0;
-       pixels[index/4+2] = 0;
+      var x = index % width;
+      var y = floor(index / width);
+      //  pixels[index+0] = 0;
+      //  pixels[index+1] = 0;
+      //  pixels[index+2] = 0;
+      set(x,y,color(0));
        //pixels[index+3] = 255;
     }else{
-         pixels[index/4+0] = 255;
-         pixels[index/4+1] = 255;
-         pixels[index/4+2] = 255;
+         pixels[index+0] = 255;
+         pixels[index+1] = 255;
+         pixels[index+2] = 255;
         // pixels[index+3] = 255;
     }
     prev.pixels[index+0] = r1;
