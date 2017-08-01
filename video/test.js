@@ -17,7 +17,7 @@ function draw() {
   video.loadPixels();
   prev.loadPixels();
   loadPixels();
-  for (var index = 0; index < video.pixels.length, index++) {
+  for (var index = 0; index < video.pixels.length; index++) {
     pixels[index] = video.pixels[index];
 
 
