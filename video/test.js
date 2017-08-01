@@ -9,7 +9,7 @@ function setup() {
   //video.hide();
   prev = createImage(video.width,video.height);
   createCanvas(320,240);
-  frameRate(30);
+  frameRate(20);
   background(100,0,200);
 }
 
@@ -28,19 +28,15 @@ function draw() {
     var g2 = prev.pixels[index+1];
     var b2 = prev.pixels[index+2];
 
-
-
-
-
     if (distSq(r1,g1,b1,r2,g2,b2) > threshold){
         pixels[index+0] = 0;
         pixels[index+1] = 0;
         pixels[index+2] = 0;
         pixels[index+3] = 255;
     }else{
-        //  pixels[index+0] = 255;
-        //  pixels[index+1] = 255;
-        //  pixels[index+2] = 255;
+          pixels[index+0] = 255;
+          pixels[index+1] = 255;
+          pixels[index+2] = 255;
         // pixels[index+3] = 255;
     }
     prev.pixels[index+0] = r1;
@@ -48,8 +44,9 @@ function draw() {
     prev.pixels[index+2] = b1;
     //
   }
-  updatePixels();
   prev.updatePixels();
+  updatePixels();
+
 
 }
 
