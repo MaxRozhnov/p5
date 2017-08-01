@@ -7,11 +7,11 @@ function setup() {
   video.hide();
   prev = createImage(320,240);
   createCanvas(320,240);
-  frameRate(30);
+  frameRate(20);
 }
 
 function draw() {
-  background(255);
+  background(0);
   video.loadPixels();
   prev.loadPixels()
   loadPixels();
