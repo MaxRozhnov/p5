@@ -15,7 +15,7 @@ function draw() {
   background(255);
   //loadPixels();
   video.loadPixels();
-  prev.loadPixels();
+  //prev.loadPixels();
   for (var y = 0; y < video.height; y++){
     for (var x = 0; x < video.width; x++){
         var index = y * video.width + x;
@@ -29,12 +29,12 @@ function draw() {
         }else{
 
         }
-        prev.pixels[index] = video.pixels[index];
 
     }
 
   }
-  prev.updatePixels();
+  prev = copy(video,0,0,video.width,video.height,video.width,video.heigth);
+  //prev.updatePixels();
 //  video.loadPixels();
 //  prev.loadPixels();
   // loadPixels();
