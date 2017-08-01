@@ -15,7 +15,7 @@ function setup() {
 function draw() {
   background(255);
   fill(0);
-  rect(0,0,100,100);
+  //rect(0,0,100,100);
   // console.log(video.get(0,0));
   // console.log(prev.get(0,0));
   for (var y = 0; y < video.height; y++){
@@ -28,6 +28,7 @@ function draw() {
         if (distSq(col[0],col[1],col[2],pcol[0],pcol[1],pcol[2]) > 1000) {
           fill(0);
           noStroke();
+          rect(x*vScale,y*vScale,vScale,vScale);
           console.log(distSq(col[0],col[1],col[2],pcol[0],pcol[1],pcol[2]));
         }else{
 
