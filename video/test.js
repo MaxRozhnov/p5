@@ -3,9 +3,10 @@ var prev;
 var threshold = 3500;
 function setup() {
 
-  pixelDensity(2);
+  pixelDensity(1);
   video = createCapture(VIDEO);
-  video.hide();
+  video.size(320,240);
+  //video.hide();
   prev = createImage(video.width,video.height*8);
   createCanvas(320,240);
   frameRate(30);
