@@ -10,7 +10,7 @@ function setup() {
   //video.hide();
   prev = createImage(video.width,video.height);
   createCanvas(320,240);
-  slider = createSlider(100,6000,3000);
+  slider = createSlider(1,9000,3000);
   frameRate(20);
   background(100,0,200);
   prev.loadPixels();
