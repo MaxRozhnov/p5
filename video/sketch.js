@@ -6,7 +6,7 @@ function setup() {
   video = createCapture(VIDEO);
   video.hide();
   prev = createImage(320,240);
-  createCanvas(320,240);
+  createCanvas(video.width,video.height);
 }
 
 function draw() {
@@ -32,6 +32,12 @@ function draw() {
         pixels[index+2] = 0;
         //pixels[index+3] = 255;
 
+      }else{
+        pixels[index+0] = 0;
+        pixels[index+1] = 0;
+        pixels[index+2] = 0;
+        pixels[index+3] = 255;
+
       }
 
       prev.pixels[index+0] = r1;
@@ -47,3 +53,4 @@ function draw() {
 function distSq(a,b,c,x,y,z){
   return ((a-x)*(a-x) + (b-y)*(b-y) + (c-z)*(c-z));
 }
+
