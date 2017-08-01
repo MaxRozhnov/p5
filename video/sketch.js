@@ -7,7 +7,7 @@ function setup() {
   video = createCapture(VIDEO);
   video.hide();
   prev = createImage(video.width,video.height*8);
-  createCanvas(320,240);
+  createCanvas(640,480);
   frameRate(30);
 }
 
