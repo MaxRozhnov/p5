@@ -38,8 +38,11 @@ function draw() {
   }
   video.loadPixels();
   prev.loadPixels();
-  prev.pixels = video.pixels;
+  for (var i = 0; i < video.pixels.length; i++){
+      prev.pixels[i] = video.pixels[i];
+  }
   prev.updatePixels();
+  
 }
 
 function distSq(a,b,c,x,y,z){
