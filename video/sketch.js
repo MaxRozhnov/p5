@@ -5,8 +5,8 @@ function setup() {
 
   video = createCapture(VIDEO);
   video.hide();
-  prev = createImage(320,240);
-  createCanvas(320,240);
+  prev = createImage(640,480);
+  createCanvas(640,480);
 }
 
 function draw() {
