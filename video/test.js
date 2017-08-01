@@ -18,16 +18,16 @@ function draw() {
   prev.loadPixels();
   loadPixels();
   for (var index = 0; index < video.pixels.length; index++) {
-    pixels[index] = video.pixels[index];
+    //pixels[index] = video.pixels[index];
 
 
-       var r1 = video.pixels[index+0];
-       var g1 = video.pixels[index+1];
-       var b1 = video.pixels[index+2];
+    var r1 = video.pixels[index+0];
+    var g1 = video.pixels[index+1];
+    var b1 = video.pixels[index+2];
 
-       var r2 = prev.pixels[index+0];
-       var g2 = prev.pixels[index+1];
-       var b2 = prev.pixels[index+2];
+    var r2 = prev.pixels[index+0];
+    var g2 = prev.pixels[index+1];
+    var b2 = prev.pixels[index+2];
       //
       // if (distSq(r1,g1,b1,r2,g2,b2) > threshold){
       //   pixels[index+0] = 0;
