@@ -34,16 +34,16 @@ function draw() {
         //pixels[index+3] = 255;
 
       }else{
-         pixels[index+0] = r1;
-         pixels[index+1] = g1;
-         pixels[index+2] = b1;
+         pixels[index+0] = 255;
+         pixels[index+1] = 255;
+         pixels[index+2] = 255;
          pixels[index+3] = 255;
 
       }
 
-      prev.pixels[index+0] = 255;
-      prev.pixels[index+1] = 255;
-      prev.pixels[index+2] = 255;
+      prev.pixels[index+0] = r1;
+      prev.pixels[index+1] = g1;
+      prev.pixels[index+2] = b1;
       prev.pixels[index+3] = 255;
     }
   }
