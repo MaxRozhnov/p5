@@ -15,7 +15,7 @@ function setup() {
 function draw() {
   background(255);
   console.log(video.get(0,0));
-  console.log(prev.get(0,0))
+  console.log(prev.get(0,0));
 
   for (var y = 0; y < video.height; y++){
     for (var x = 0; x < video.width; x++){
