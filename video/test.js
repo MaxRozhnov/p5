@@ -28,11 +28,12 @@ function draw() {
     var r2 = prev.pixels[index+0];
     var g2 = prev.pixels[index+1];
     var b2 = prev.pixels[index+2];
-      //
-      // if (distSq(r1,g1,b1,r2,g2,b2) > threshold){
-      //   pixels[index+0] = 0;
-      //   pixels[index+1] = 0;
-      //   pixels[index+2] = 0;
+
+    if (distSq(r1,g1,b1,r2,g2,b2) > threshold){
+      pixels[index+0] = 0;
+      pixels[index+1] = 0;
+      pixels[index+2] = 0;
+    }
       //
       // }else{
       //    pixels[index+0] = 255;
@@ -42,10 +43,10 @@ function draw() {
       //
       // }
       //
-      // prev.pixels[index+0] = r1;
-      // prev.pixels[index+1] = g1;
-      // prev.pixels[index+2] = b1;
-      // prev.pixels[index+3] = 255;
+    prev.pixels[index+0] = r1;
+    prev.pixels[index+1] = g1;
+    prev.pixels[index+2] = b1;
+    prev.pixels[index+3] = 255;
     //}
   }
   updatePixels();
