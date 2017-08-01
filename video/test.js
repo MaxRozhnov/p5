@@ -35,10 +35,9 @@ function draw() {
 
 
     if (distSq(r1,g1,b1,r2,g2,b2) > threshold){
-
-      //  pixels[index+0] = 0;
-      //  pixels[index+1] = 0;
-      //  pixels[index+2] = 0;
+        pixels[index+0] = 0;
+        pixels[index+1] = 0;
+        pixels[index+2] = 0;
        //pixels[index+3] = 255;
     }else{
         //  pixels[index+0] = 255;
