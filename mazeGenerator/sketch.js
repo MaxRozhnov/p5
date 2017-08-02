@@ -8,7 +8,7 @@ var current;
 function setup(){
   cellD = 20;
 
-  createCanvas(800,800);
+  createCanvas(400,400);
 
   background(0);
 
