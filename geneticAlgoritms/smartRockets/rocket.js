@@ -5,6 +5,7 @@ function Rocket(dna){
       this.dna = new DNA();
   }
   this.time = 0;
+  //this.trail =[];
   this.reached = false;
   this.crashed = false;
   this.pos = createVector(width/2,height);
@@ -33,14 +34,20 @@ function Rocket(dna){
     if(this.pos.y > height || this.pos.y < 0){
       this.crashed = true;
     }
+    for(var i = 0; i < walls.length; i++){
+      walls[i].hits(this);
+    }
+
 
     this.applyForce(this.dna.genes[lived]);
 
     if(!this.reached && !this.crashed){
     this.time++;
+    //this.trail.push(this.pos);
     this.vel.add(this.acc);
     this.pos.add(this.vel);
     this.acc.mult(0);
+
     }
   }
 
@@ -62,7 +69,7 @@ function Rocket(dna){
       this.fitness *= 10 + speedMult;
     }
     if(this.crashed){
-      this.fitness /= 10;
+      this.fitness /= 15;
     }
   }
 
