@@ -1,9 +1,12 @@
-var speed = 0.2;
+var history =[];
+var speed = 0.3;
 var walls =[];
 var target;
 var life = 200;
 var lived = 0;
 var population;
+var mutationRate = 1;
+var generation = 1;
 function setup(){
   frameRate(100);
 
@@ -41,11 +44,13 @@ function mousePressed(){
 
     target.x = mouseX;
     target.y = mouseY;
+    population.history.splice(0,population.period);
 
 }
 
 function keyPressed(){
   if (key == ' '){
     walls.push(new Obstacle(mouseX,mouseY));
+    population.history.splice(0,population.period);
   }
 }

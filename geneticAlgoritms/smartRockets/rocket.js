@@ -12,6 +12,8 @@ function Rocket(dna){
   this.vel = createVector(0,0);
   this.acc = createVector(0,0);
 
+  this.bestRange = width;
+
 
 
   this.fitness = 0;
@@ -24,6 +26,9 @@ function Rocket(dna){
 
   this.update = function(){
     var d = dist(this.pos.x,this.pos.y,target.x,target.y);
+    if (d < this.bestRange){
+      this.bestRange = d;
+    }
     if (d < 10){
       this.reached = true;
     }
@@ -62,15 +67,16 @@ function Rocket(dna){
   }
 
   this.calcFitness = function(){
-    d = dist(this.pos.x,this.pos.y,target.x,target.y);
-    this.fitness = map(d,0,width,width,0);
+    //d = dist(this.pos.x,this.pos.y,target.x,target.y);
+    this.fitness = map(this.bestRange,0,width,width,0);
     if (this.reached){
       var speedMult = map(this.time,life,0,1,10);
       this.fitness *= 10 + speedMult;
     }
     if(this.crashed){
-      this.fitness /= 15;
+      this.fitness /= 20;
     }
+    this.fitness *= this.fitness;
   }
 
 

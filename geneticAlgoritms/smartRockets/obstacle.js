@@ -9,9 +9,7 @@ function Obstacle(x,y){
     fill(255);
     rect(this.pos.x,this.pos.y,this.w,this.h);
     pop();
-
   }
-
   this.hits = function(rocket){
     if (rocket.pos.x > this.pos.x - this.w/2 && rocket.pos.x < this.pos.x + this.w/2){
       if (rocket.pos.y > this.pos.y - this.h/2 && rocket.pos.y < this.pos.y + this.h/2){
