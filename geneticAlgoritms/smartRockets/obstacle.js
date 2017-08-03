@@ -5,7 +5,11 @@ function Obstacle(x,y){
   this.show = function() {
     push();
     rectMode(CENTER);
+    noStroke();
+    fill(255);
     rect(this.pos.x,this.pos.y,this.w,this.h);
+    pop();
+
   }
 
   this.hits = function(rocket){

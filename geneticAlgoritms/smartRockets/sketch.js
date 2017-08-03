@@ -16,10 +16,7 @@ function setup(){
 
 function draw(){
   background(0);
-  ellipse(target.x,target.y,10,10);
-  for(var i = 0; i < walls.length; i++){
-    walls[i].show();
-  }
+
   population.update();
   lived++;
   if (lived == life) {
@@ -27,14 +24,28 @@ function draw(){
     population.evolve();
     population.selection();
   }
+  for(var i = 0; i < walls.length; i++){
+    walls[i].show();
+  }
+  fill(255);
+  noStroke();
+  ellipse(target.x,target.y,15,15);
+  fill(0,0,255);
+  ellipse(target.x,target.y,10,10);
+  fill(255,0,0);
+  ellipse(target.x,target.y,6,6);
 
 }
 
 function mousePressed(){
-  target.x = mouseX;
-  target.y = mouseY;
+
+    target.x = mouseX;
+    target.y = mouseY;
+
 }
 
 function keyPressed(){
-  walls.push(new Obstacle(mouseX,mouseY));
+  if (key == ' '){
+    walls.push(new Obstacle(mouseX,mouseY));
+  }
 }

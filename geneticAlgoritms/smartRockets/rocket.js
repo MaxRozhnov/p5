@@ -24,7 +24,7 @@ function Rocket(dna){
 
   this.update = function(){
     var d = dist(this.pos.x,this.pos.y,target.x,target.y);
-    if (d < 5){
+    if (d < 10){
       this.reached = true;
     }
 
