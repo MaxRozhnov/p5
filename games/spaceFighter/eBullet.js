@@ -22,7 +22,7 @@ function EBullet(x,y,enemy){
     // noStroke();
     // rect(0,0,this.h,this.w);
     imageMode(CENTER);
-    image(eBulletPic,this.pos.x,this.pos.y,eBulletPic.width,eBulletPic.height);
+    image(eBulletPic,0,0,eBulletPic.width,eBulletPic.height);
     pop();
   }
 
