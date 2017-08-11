@@ -7,10 +7,12 @@ function Enemy(x,y){
   this.frameOffset = floor(random(60));
 
   this.show = function(){
-    rectMode(CENTER);
-    fill(255);
-    noStroke();
-    rect(this.pos.x,this.pos.y,this.w,this.h);
+    // rectMode(CENTER);
+    // fill(255);
+    // noStroke();
+    // rect(this.pos.x,this.pos.y,this.w,this.h);
+    imageMode(CENTER);
+    image(enemyPic,this.pos.x,this.pos.y,enemyPic.width,enemyPic.height);
   }
 
   this.update = function(){
