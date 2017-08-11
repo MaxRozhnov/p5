@@ -9,10 +9,12 @@ function Plane(){
   this.bulletOffset = 6;
 
   this.show = function(){
-    rectMode(CENTER);
-    fill(255);
-    noStroke();
-    rect(this.pos.x,this.pos.y,this.w,this.h);
+    // rectMode(CENTER);
+    // fill(255);
+    // noStroke();
+    // rect(this.pos.x,this.pos.y,this.w,this.h);
+    imageMode(CENTER);
+    image(planePic,this.pos.x,this.pos.y,planePic.width,planePic.height);
   }
 
   this.update = function(){
