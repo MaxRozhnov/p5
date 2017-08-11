@@ -18,7 +18,7 @@ function preload(){
 
 }
 function setup() {
-  createCanvas(360*scale,640*scale);
+  createCanvas(360*2.5,640*2.5);
   CreateEnemyCluster(2);
 
 
