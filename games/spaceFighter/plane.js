@@ -4,7 +4,7 @@ function Plane(){
   this.w = 20;
   this.h = 32;
   this.hp = 100;
-  this.maxSpeed = 6*scale;
+  this.maxSpeed = 6*sizeScale;
   this.mousePos = createVector(0,0);
   this.bulletOffset = 6;
 

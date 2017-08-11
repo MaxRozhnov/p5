@@ -8,7 +8,7 @@ var enemyPic;
 var mouseDist;
 var bullets = [];
 var enemyBullets = [];
-var scale = 2.5;
+var sizeScale;
 
 function preload(){
   planePic = loadImage("sprites/planeFly.png");
@@ -18,7 +18,8 @@ function preload(){
 
 }
 function setup() {
-  createCanvas(360*2.5,640*2.5);
+  sizeScale = 2.5
+  createCanvas(360*sizeScale,640*sizeScale);
   CreateEnemyCluster(2);
 
 

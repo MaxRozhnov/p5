@@ -1,7 +1,7 @@
 function PBullet(x,y){
   this.w = 4;
   this.h = 20;
-  this.speed = 8*scale;
+  this.speed = 8*sizeScale;
   this.alive = true;
   this.pos = createVector(x,y);
   this.vel = createVector(0,-this.speed);

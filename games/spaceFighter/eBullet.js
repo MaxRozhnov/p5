@@ -1,7 +1,7 @@
 function EBullet(x,y,enemy){
   this.w = 4;
   this.h = 20;
-  this.speed = 3*scale;
+  this.speed = 3*sizeScale;
   this.alive = true;
   this.pos = createVector(x,y);
   this.vel = createVector(plane.pos.x,plane.pos.y);
