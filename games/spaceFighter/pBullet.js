@@ -7,10 +7,12 @@ function PBullet(x,y){
   this.vel = createVector(0,-this.speed);
 
   this.show = function(){
-    rectMode(CENTER);
-    fill(255);
-    noStroke();
-    rect(this.pos.x,this.pos.y,this.w,this.h);
+    // rectMode(CENTER);
+    // fill(255);
+    // noStroke();
+    // rect(this.pos.x,this.pos.y,this.w,this.h);
+    imageMode(CENTER);
+    image(pBulletPic,this.pos.x,this.pos.y,pBulletPic.width,pBulletPic.height);
   }
 
   this.update = function(){

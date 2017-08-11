@@ -13,14 +13,16 @@ function EBullet(x,y,enemy){
   console.log(this.vel.heading());
 
   this.show = function(){
-  
+
     push();
     translate(this.pos.x,this.pos.y);
     rotate(this.vel.heading());
-    rectMode(CENTER);
-    fill(255);
-    noStroke();
-    rect(0,0,this.h,this.w);
+    // rectMode(CENTER);
+    // fill(255);
+    // noStroke();
+    // rect(0,0,this.h,this.w);
+    imageMode(CENTER);
+    image(eBulletPic,this.pos.x,this.pos.y,eBulletPic.width,eBulletPic.height);
     pop();
   }
 
