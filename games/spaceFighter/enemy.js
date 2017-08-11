@@ -1,6 +1,7 @@
 function Enemy(x,y){
   this.pos = createVector(x,y);
-  this.vel = createVector(0,1);
+  this.speed = scale;
+  this.vel = createVector(0,this.speed);
   this.w = 32;
   this.h = 20;
   this.alive = true;

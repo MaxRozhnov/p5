@@ -1,7 +1,7 @@
 function Star(x,y){
   this.pos = createVector(x,y);
 
-  this.speed = random(0.2,0.5);
+  this.speed = random(0.2,0.5)*scale;
   this.vel = createVector(0,this.speed);
 
   this.size = map(this.speed,0.2,0.5,0.,2);
