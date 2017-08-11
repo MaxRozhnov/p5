@@ -16,7 +16,7 @@ function EBullet(x,y,enemy){
 
     push();
     translate(this.pos.x,this.pos.y);
-    rotate(this.vel.heading()-PI);
+    rotate(this.vel.heading()-PI/2);
     // rectMode(CENTER);
     // fill(255);
     // noStroke();
